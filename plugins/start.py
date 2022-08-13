@@ -40,7 +40,7 @@ async def is_not_subscribed(client, message):
     text = "**𝚂𝙾𝚁𝚁𝚈 𝙳𝚄𝙳𝙴 𝚈𝙾𝚄𝚁 𝙽𝙾𝚃 𝙹𝙾𝙸𝙽𝙳 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 😔. 𝙿𝙻𝙴𝙰𝚂𝙴 𝙹𝙾𝙸𝙽 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 🙏 **"
     await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
            
-@Client.on_message(filters.private & filters.command(["start"]))
+@Client.on_message(filters.private & filters.command(["strt"]))
 async def start(client, message):
     insert(int(message.chat.id))
     await message.reply_photo(
